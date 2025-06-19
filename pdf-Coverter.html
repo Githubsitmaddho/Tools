@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Media Converter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Ultimate Media Converter - Convert Images, PDFs, Videos Online</title>
+    <meta name="description" content="Free online media converter for images to PDF, PDF to Excel, PDF to Word, YouTube and Instagram downloads. No registration required, works entirely in your browser.">
+    <meta name="keywords" content="PDF converter, image to PDF, PDF to Excel, PDF to Word, YouTube downloader, Instagram downloader, online converter, free converter">
+    <meta name="author" content="Ultimate Media Converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourwebsite.com/converter" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Ultimate Media Converter - Convert Images, PDFs, Videos Online">
+    <meta property="og:description" content="Free online media converter for images to PDF, PDF to Excel, PDF to Word, YouTube and Instagram downloads.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/converter">
+    <meta property="og:image" content="https://yourwebsite.com/images/converter-preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ultimate Media Converter - Convert Images, PDFs, Videos Online">
+    <meta name="twitter:description" content="Free online media converter for images to PDF, PDF to Excel, PDF to Word, YouTube and Instagram downloads.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/converter-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preload important resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data / Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Ultimate Media Converter",
+      "url": "https://yourwebsite.com/converter",
+      "description": "Free online media converter for images to PDF, PDF to Excel, PDF to Word, YouTube and Instagram downloads.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
     <style>
         :root {
             --primary-color: #4a6bff;
@@ -55,6 +100,39 @@
             color: #666;
             font-size: 1.1rem;
             margin-bottom: 20px;
+        }
+
+        /* Ad Container Styles */
+        .ad-container {
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            border: 1px dashed #ccc;
+        }
+
+        .ad-container p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .ad-leaderboard {
+            width: 100%;
+            height: 90px;
+        }
+
+        .ad-banner {
+            width: 100%;
+            height: 250px;
+            margin: 20px 0;
+        }
+
+        .ad-sidebar {
+            width: 300px;
+            height: 600px;
+            margin: 0 auto;
         }
 
         .converter-tabs {
@@ -497,8 +575,33 @@
             padding: 20px;
             color: #666;
             font-size: 0.9rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
         }
 
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            padding: 10px 0;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #666;
+            margin: 0 5px;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .preview-images {
                 grid-template-columns: 1fr;
@@ -520,15 +623,80 @@
             .url-input-container {
                 flex-direction: column;
             }
+
+            .ad-sidebar {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .converter-tabs, .ad-container, footer {
+                display: none;
+            }
+            
+            .converter-content {
+                display: block !important;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/tools">Online Tools</a>
+            <span>/</span>
+            <span>Media Converter</span>
+        </div>
+
+        <!-- Top Ad Banner -->
+        <div class="ad-container">
+            <p>Advertisement</p>
+            <!-- Replace with your Google AdSense code -->
+            <div class="ad-leaderboard" id="top-ad">
+                <!-- Google AdSense Leaderboard Ad -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Top Banner Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
         <header>
             <h1>Ultimate Media Converter</h1>
-            <p class="subtitle">Convert, download, and transform media files with advanced options</p>
+            <p class="subtitle">Convert, download, and transform media files with advanced options. All processing happens in your browser - no files are uploaded to any server.</p>
         </header>
+
+        <!-- Sidebar Ad (Desktop Only) -->
+        <div class="ad-container" style="float: right; width: 300px; margin-left: 20px; display: none;" id="sidebar-ad">
+            <p>Advertisement</p>
+            <!-- Replace with your Google AdSense code -->
+            <div class="ad-sidebar">
+                <!-- Google AdSense Sidebar Ad -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Sidebar Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
 
         <div class="converter-tabs">
             <button class="tab-btn image-to-pdf active" data-tab="image-to-pdf">Image to PDF</button>
@@ -536,6 +704,25 @@
             <button class="tab-btn pdf-to-word" data-tab="pdf-to-word">PDF to Word</button>
             <button class="tab-btn youtube-downloader" data-tab="youtube-downloader">YouTube Downloader</button>
             <button class="tab-btn instagram-downloader" data-tab="instagram-downloader">Instagram Downloader</button>
+        </div>
+
+        <!-- Mid-Page Ad Banner -->
+        <div class="ad-container">
+            <p>Advertisement</p>
+            <div class="ad-banner" id="mid-ad">
+                <!-- Google AdSense Banner Ad -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Mid-Page Banner Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
 
         <!-- Image to PDF Converter -->
@@ -671,7 +858,7 @@
                     <div class="form-group checkbox-group">
                         <input type="checkbox" id="preserveFormatting" checked>
                         <label for="preserveFormatting">Preserve formatting</label>
-                        </div>
+                    </div>
 
                     <div class="form-group checkbox-group">
                         <input type="checkbox" id="extractImages" checked>
@@ -856,6 +1043,25 @@
                 </div>
             </div>
         </div>
+
+        <!-- Bottom Ad Banner -->
+        <div class="ad-container">
+            <p>Advertisement</p>
+            <div class="ad-banner" id="bottom-ad">
+                <!-- Google AdSense Bottom Banner Ad -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Bottom Banner Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
     </div>
 
     <div class="loading-overlay" id="loadingOverlay">
@@ -866,6 +1072,7 @@
 
     <footer>
         <p>Ultimate Media Converter &copy; 2023 | All client-side processing, no files are uploaded to any server</p>
+        <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a> | <a href="/contact">Contact Us</a></p>
     </footer>
 
     <!-- Libraries -->
@@ -891,6 +1098,11 @@
         // Common Elements
         const loadingOverlay = document.getElementById('loadingOverlay');
         const toast = document.getElementById('toast');
+
+        // Show sidebar ad on desktop
+        if (window.innerWidth > 992) {
+            document.getElementById('sidebar-ad').style.display = 'block';
+        }
 
         // Tab Switching
         tabBtns.forEach(btn => {
